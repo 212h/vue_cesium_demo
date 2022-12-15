@@ -20,19 +20,11 @@ module.exports = {
 
       "/search": {
         target: "http://123.60.52.244/search",
-        // target: "http://192.168.106.12:8082", //费用中心  李丁
         changeOrigin: true, //改变源
         pathRewrite: {
           "^/search": "",
         }
       },
-      // "/apilist": {
-      //   target: "http://192.168.101.12:8082", //费用中心  李丁
-      //   changeOrigin: true, //改变源
-      //   pathRewrite: {
-      //     "^/apilist": "",
-      //   },
-      // },
     },
   },
   configureWebpack: {

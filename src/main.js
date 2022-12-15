@@ -5,7 +5,7 @@ import moment from "moment";
 //引入elementui
 import ElementUI from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
-//引入高彩桥设计的图标
+//引入xx设计的图标
 import '@/fonts/iconfont.css';
 
 
@@ -17,10 +17,6 @@ import store from './store';
 /* 引入 elementui */
 Vue.use(ElementUI);
 
-/* 引入 ant-design-vue  v1.1.3+ */
-// Vue.use(antDesignCarousel);
-// Vue.use(antDesignIcon);
-// Vue.use(antDesignUpload);
 
 //全局修改elementui样式
 import './styles/globalSetElementui.scss'
