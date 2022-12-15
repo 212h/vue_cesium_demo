@@ -1,0 +1,35 @@
+.el-dialog{
+  overflow: auto;
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px) {
+  .el-dialog{
+    width: 95% !important;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .el-dialog{
+    width: 90% !important;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 992px) {
+  .el-dialog{
+    width: 80% !important;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 1200px) {
+  .el-dialog{
+    width: 62% !important;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1920px) {
+  .el-dialog{
+    width: 50% !important;
+  }
+}

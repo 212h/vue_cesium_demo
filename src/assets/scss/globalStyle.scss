@@ -1,0 +1,428 @@
+#app {
+  font-family: Noto Sans SC, "Open Sans", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400; //| Regular | 400 (default) |
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #333;
+  font-size: 14px;
+  min-width: 1200px;
+  overflow: auto;
+  background-color: #fff;
+  height: 100%;
+  letter-spacing: 1px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box !important;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: antialiased;
+  word-break: break-all; /* 单词截断自动换行; */
+  word-break: break-word; /* 标点符号截断自动换行; */
+  white-space: normal;
+}
+pre {
+  white-space: pre-wrap;
+}
+a {
+  text-decoration: none !important;
+}
+img {
+  vertical-align: middle;
+}
+input {
+  outline: none;
+  border: 0;
+}
+body {
+  height: 100%;
+  min-width: 768px;
+}
+/*外阴影，百度原始*/
+.boxShodow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12);
+}
+/*百度最新*/
+.boxShodow2 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+}
+/*超过一行显示省略号*/
+.ellipsis {
+  white-space: nowrap; /*不允许换行*/
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  border-radius: 10px;
+  background-color: rgba(193, 193, 193, 0.1);
+}
+/* 滚动条的滑块 */
+::-webkit-scrollbar-thumb {
+  background-color:rgba(193, 193, 193, 0.1) !important;
+  border-radius: 3px;
+  box-shadow: inset 0 0 2px rgba(193, 193, 193, 0.8) !important;
+  -webkit-box-shadow: inset 0 0 2px rgba(193, 193, 193, 0.8) !important;
+}
+.scale {
+  transition: all 0.5s linear;
+}
+.scale:hover {
+  transform: scale(1.1);
+}
+
+.hover:hover {
+  cursor: pointer;
+}
+/*  段落开头两个字空格*/
+.paragraphBeginning {
+  text-align: left;
+  text-indent: 2em;
+  padding-bottom: 10px;
+}
+/*解决IE 自带的密码框 小眼睛与输入框X符号*/
+input::-ms-clear {
+  display: none;
+} /*删除文本框中的叉号*/
+input::-ms-reveal {
+  display: none;
+} /*删除密码框中的小眼睛*/
+.nodataParentContainer {
+  height: 100%;
+}
+// 可复制 文本
+span {
+  -moz-user-select: text; /* Firefox私有属性 */
+  -webkit-user-select: text; /* WebKit内核私有属性 */
+  -ms-user-select: text; /* IE私有属性(IE10及以后) */
+  -khtml-user-select: text; /* KHTML内核私有属性 */
+  -o-user-select: text; /* Opera私有属性 */
+  user-select: text; /* CSS3属性 */
+}
+
+.refreshIcon{
+  font-size: 18px !important;
+  font-weight: bolder !important;
+  color:#999 !important;
+  -moz-user-select:none; /* Firefox私有属性 */
+  -webkit-user-select:none; /* WebKit内核私有属性 */
+  -ms-user-select:none; /* IE私有属性(IE10及以后) */
+  -khtml-user-select:none; /* KHTML内核私有属性 */
+  -o-user-select:none; /* Opera私有属性 */
+  user-select:none; /* CSS3属性 */
+  &:hover{
+    color: #00B0EC !important;
+  }
+}
+// css不可复制
+.noSelect{
+  -moz-user-select:none; /* Firefox私有属性 */
+  -webkit-user-select:none; /* WebKit内核私有属性 */
+  -ms-user-select:none; /* IE私有属性(IE10及以后) */
+  -khtml-user-select:none; /* KHTML内核私有属性 */
+  -o-user-select:none; /* Opera私有属性 */
+  user-select:none; /* CSS3属性 */
+}
+/*小型按钮*/
+.skyBlue-bg-mini{
+  color:#fff;
+  border:transparent;
+  background:$sky-blue-color;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:100%;
+  height:28px;
+  font-size:12px;
+  -moz-user-select:none; /* Firefox私有属性 */
+  -webkit-user-select:none; /* WebKit内核私有属性 */
+  -ms-user-select:none; /* IE私有属性(IE10及以后) */
+  -khtml-user-select:none; /* KHTML内核私有属性 */
+  -o-user-select:none; /* Opera私有属性 */
+  user-select:none; /* CSS3属性 */
+  &:hover{
+    background:$sky-blue-color-opacity8;
+    border-color:$sky-blue-color-opacity1;
+    cursor:pointer;
+  }
+}
+.skyBlue-nobg-mini{
+  color:$sky-blue-color;
+  border:1px solid $sky-blue-color-opacity8;
+  background:#fff;
+  border-radius: 4px;
+  padding:5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:100%;
+  height:28px;
+  font-size:12px;
+  -moz-user-select:none; /* Firefox私有属性 */
+  -webkit-user-select:none; /* WebKit内核私有属性 */
+  -ms-user-select:none; /* IE私有属性(IE10及以后) */
+  -khtml-user-select:none; /* KHTML内核私有属性 */
+  -o-user-select:none; /* Opera私有属性 */
+  user-select:none; /* CSS3属性 */
+  &:hover{
+    color:#fff;
+    background:$sky-blue-color;
+    border-color:$sky-blue-color-opacity1;
+    cursor:pointer;
+  }
+}
+.grayBtn-mini{
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border:1px solid $gray-border-color;
+  border-radius:4px;
+  background:#fff;
+  font-size:12px;
+  -moz-user-select:none; /* Firefox私有属性 */
+  -webkit-user-select:none; /* WebKit内核私有属性 */
+  -ms-user-select:none; /* IE私有属性(IE10及以后) */
+  -khtml-user-select:none; /* KHTML内核私有属性 */
+  -o-user-select:none; /* Opera私有属性 */
+  user-select:none; /* CSS3属性 */
+  &:hover{
+    cursor:pointer;
+    background:$gray-bg-hover-color2;
+  }
+}
+/*  按钮*/
+.btnNoActiveGlobal {
+  background: #fff;
+  color:$blue-color-txt;
+  border:2px solid $blue-color-txt;
+  border-radius: 5px;
+  -moz-user-select:none; /* Firefox私有属性 */
+  -webkit-user-select:none; /* WebKit内核私有属性 */
+  -ms-user-select:none; /* IE私有属性(IE10及以后) */
+  -khtml-user-select:none; /* KHTML内核私有属性 */
+  -o-user-select:none; /* Opera私有属性 */
+  user-select:none; /* CSS3属性 */
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  font-size: 13px;
+  &:hover,
+  &:focus {
+    cursor:pointer;
+    background: $blue-color-txt;
+    color: #fff !important;
+    border:2px solid transparent;
+  }
+}
+/* 蓝边框  篮子  鼠标放上去 背景蓝色  字体白色 */
+.btnNoActiveGlobal2 {
+  background: #fff;
+  color:$blue-color-txt;
+  border:1px solid $blue-color-txt;
+  border-radius: 5px;
+  -moz-user-select:none; /* Firefox私有属性 */
+  -webkit-user-select:none; /* WebKit内核私有属性 */
+  -ms-user-select:none; /* IE私有属性(IE10及以后) */
+  -khtml-user-select:none; /* KHTML内核私有属性 */
+  -o-user-select:none; /* Opera私有属性 */
+  user-select:none; /* CSS3属性 */
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover,
+  &:focus {
+    cursor:pointer;
+    color: #fff !important;
+    background: $blue1-color;
+    border:1px solid transparent;
+  }
+}
+/*  按钮 有背景色蓝色*/
+.btnBlueGlobal {
+  background: $blue1-color;
+  color:#fff;
+  border:2px solid transparent;
+  border-radius: 5px;
+  -moz-user-select:none; /* Firefox私有属性 */
+  -webkit-user-select:none; /* WebKit内核私有属性 */
+  -ms-user-select:none; /* IE私有属性(IE10及以后) */
+  -khtml-user-select:none; /* KHTML内核私有属性 */
+  -o-user-select:none; /* Opera私有属性 */
+  user-select:none; /* CSS3属性 */
+  padding:2px 10px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  &:hover,
+  &:focus {
+    color: #fff !important;
+    background:$blue1-color-opacity;
+    border:2px solid transparent;
+    cursor:pointer;
+  }
+}
+/*  按钮定义公共样式*/
+.blueBtn {
+  border-radius: 4px;
+  border: 1px solid #fff;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-user-select:none; /* Firefox私有属性 */
+  -webkit-user-select:none; /* WebKit内核私有属性 */
+  -ms-user-select:none; /* IE私有属性(IE10及以后) */
+  -khtml-user-select:none; /* KHTML内核私有属性 */
+  -o-user-select:none; /* Opera私有属性 */
+  user-select:none; /* CSS3属性 */
+  &:hover {
+    background-image: $blue1-color;
+    border: 0px solid transparent !important;
+    cursor: pointer;
+  }
+}
+.blueBtnActive {
+  background: $blue1-color;
+  color: #fff;
+  border: 0px solid transparent !important;
+  -moz-user-select:none; /* Firefox私有属性 */
+  -webkit-user-select:none; /* WebKit内核私有属性 */
+  -ms-user-select:none; /* IE私有属性(IE10及以后) */
+  -khtml-user-select:none; /* KHTML内核私有属性 */
+  -o-user-select:none; /* Opera私有属性 */
+  user-select:none; /* CSS3属性 */
+  &:hover,
+  &:focus {
+    cursor:pointer;
+    background: $blue1-color;
+  }
+}
+.blueBtnActive2 {
+  background: $blue1-color;
+  color: #fff;
+  border: 0px solid transparent !important;
+  -moz-user-select:none; /* Firefox私有属性 */
+  -webkit-user-select:none; /* WebKit内核私有属性 */
+  -ms-user-select:none; /* IE私有属性(IE10及以后) */
+  -khtml-user-select:none; /* KHTML内核私有属性 */
+  -o-user-select:none; /* Opera私有属性 */
+  user-select:none; /* CSS3属性 */
+  &:hover,
+  &:focus {
+    cursor:pointer;
+    background: $blue1-color-opacity;
+  }
+}
+/*  正常按钮*/
+.normalBtn {
+  border-radius: 4px;
+  border: 1px solid #dcdfe6;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #606266;
+  -moz-user-select:none; /* Firefox私有属性 */
+  -webkit-user-select:none; /* WebKit内核私有属性 */
+  -ms-user-select:none; /* IE私有属性(IE10及以后) */
+  -khtml-user-select:none; /* KHTML内核私有属性 */
+  -o-user-select:none; /* Opera私有属性 */
+  user-select:none; /* CSS3属性 */
+  &:hover,
+  &:focus {
+    background: #ecf5ff;
+    color: #409eff;
+    border: 0px solid transparent !important;
+    cursor: pointer;
+  }
+}
+/*  橙黄色 背景 鼠标放上去颜色变浅*/
+.globalOrangeBtn{
+  border-radius: 4px;
+  border: 0px solid #EDEDED;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+  font-size: 14px;
+  background:rgb(245,154,35);
+  &:hover,
+  &:focus {
+    background: rgba(245,154,35,.9);
+    color: #fff;
+    cursor: pointer;
+  }
+}
+/*  灰色边框  黑字体 鼠标放上去蓝色背景*/
+.primaryBtnHasBorder{
+  border-radius: 4px;
+  border: 1px solid #EDEDED;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaaaaa;
+  font-size: 14px;
+  &:hover,
+  &:focus {
+    background: $blue1-color;
+    color: #fff;
+    border: 1px solid transparent !important;
+    cursor: pointer;
+  }
+}
+//  公用的icon
+//  error  叹号
+.errorIconCtn{
+  color: #fff;
+  background: rgb(245, 108, 108);
+  width: 17px;
+  height: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 12px;
+  .errorIcon{
+    font-size: 12px;
+  }
+
+}
+//正确√
+.correctIconCtn{
+  .correctIcon{
+    color: #fff;
+    background: rgb(80,212,171);
+    width: 17px;
+    height: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 12px;
+  }
+}
+.globalBoxShodow{
+  box-shadow: 0px 0px 5px rgb(215, 215, 215);
+  -moz-box-shadow: 0px 0px 5px rgb(215, 215, 215);
+  -webkit-box-shadow: 0px 0px 5px rgb(215, 215, 215);
+}
